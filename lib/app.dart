@@ -17,7 +17,7 @@ class MoonSpaceTask extends StatelessWidget {
       
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-          title: 'Sakany App',
+          title: 'Moon Space',
         theme: ThemeData(
 
             // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
