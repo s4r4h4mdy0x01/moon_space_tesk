@@ -12,6 +12,7 @@ Flutter Project
 -injectable for dependency injection.
 - FlutterScreenUtil for responsive design
 - Cached Network Images for handling online images
+-  Using pull_to_refresh to the flutter scroll component drop-down refresh and pull up load.
 
 ## Getting Started
 
@@ -26,6 +27,10 @@ A few resources to get you started if this is your first Flutter project:
 ![search_widget](https://github.com/user-attachments/assets/db4ca616-3830-458b-ac82-e78e02e9ea96)
 ### home screen consists of card of products !The design is similar to the picture because there is no access to it from Figma 
 ![home](https://github.com/user-attachments/assets/35678535-2d6f-481e-b2ee-5c7fb3205458)
+### scroll to view more Products
+![scrol](https://github.com/user-attachments/assets/9f5be6af-1ab8-45d3-a86a-d20b1e8f7855)
+
+![scrol2](https://github.com/user-attachments/assets/d1bead49-376d-4a7f-8808-e55a512e8eae)
 
 
 For help getting started with Flutter development, view the
