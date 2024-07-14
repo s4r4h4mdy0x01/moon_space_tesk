@@ -17,8 +17,8 @@ class SearchContainer extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(32.0),
         border: Border.all(
-          color: Colors.blue, // Border color
-          width: 3.0, // Border width
+          color: ColorManager.primary, // Border color
+          width: 1.3, // Border width
         ),
       ),
       child: Row(
