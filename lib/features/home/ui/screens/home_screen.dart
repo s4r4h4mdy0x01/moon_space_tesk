@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:moon_space_task/features/home/ui/widgets/grid_view_builder_products.dart';
 import 'package:moon_space_task/features/home/ui/widgets/home_top_bar.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -8,16 +10,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+
         child: Container(
-          margin: const EdgeInsets.fromLTRB(20, 16, 20, 28),
-          child: Column(
-            children: [
-              const HomeTopBar(),
-             
-            ],
-          ),
+           margin: const EdgeInsets.fromLTRB(6, 20, 6, 28),
+          child: Column(children: [
+              Center(child: const     HomeTopBar()),
+              Expanded(child: GridViewBuilderProducts()),
+          ],),
         ),
-      ),
+      )
     );
   }
 }

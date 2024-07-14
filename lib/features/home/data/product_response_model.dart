@@ -2,13 +2,21 @@ import 'package:json_annotation/json_annotation.dart';
 part 'product_response_model.g.dart';
 @JsonSerializable()
 class ProductResponseModel{
+  int? total;
+   int? skip;
+   int? limit;
   @JsonKey(name: 'products')
   List<Products?>?productsList;
 ProductResponseModel({
-    this.productsList
+    this.productsList,
+    this.total,
+    this.limit,
+    this.skip,
+    
   });
 factory ProductResponseModel.fromJson(Map<String, dynamic> json) =>
       _$ProductResponseModelFromJson(json);
+ Map<String, dynamic> toJson() => _$ProductResponseModelToJson(this);
 }
 @JsonSerializable()
 class Products {
@@ -31,4 +39,6 @@ class Products {
   });
   factory Products.fromJson(Map<String, dynamic> json) =>
       _$ProductsFromJson(json);
+   Map<String, dynamic> toJson() => _$ProductsToJson(this);
+      
 }

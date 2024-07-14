@@ -10,6 +10,8 @@ abstract class ApiService {
  
  
  @GET(ApiContants.home)
-  Future<ProductResponseModel> getProducts(@Query("skip") int skip, @Query("limit") int limit);
+  Future<ProductResponseModel> getProducts( 
+    @Query("skip") int skip,
+    @Query("limit") int limit,);
   
 }

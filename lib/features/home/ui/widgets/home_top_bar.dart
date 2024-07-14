@@ -10,13 +10,16 @@ class HomeTopBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-      children: [
-      AppTextField(hintText: StringManeger.hintTextSearchTextField,prefixIcon:  Icon(Icons.search ,color: ColorManager.primary, size: 30.sp,), ),
-     IconButton(icon: Icon(Icons.shopping_cart_outlined, color: ColorManager.primary, size: 28.sp,), onPressed: () {
-       
-     },),
-      ],
+    return  Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.w,vertical: 20.h),
+      child: Row(
+        children: [
+        AppTextField(hintText: StringManeger.hintTextSearchTextField,prefixIcon:  Icon(Icons.search ,color: ColorManager.primary, size: 30.sp,), ),
+       IconButton(icon: Icon(Icons.shopping_cart_outlined, color: ColorManager.primary, size: 28.sp,), onPressed: () {
+         
+       },),
+        ],
+      ),
     );
   }
 }

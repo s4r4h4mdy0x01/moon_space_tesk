@@ -13,11 +13,17 @@ ProductResponseModel _$ProductResponseModelFromJson(
           ?.map((e) =>
               e == null ? null : Products.fromJson(e as Map<String, dynamic>))
           .toList(),
+      total: (json['total'] as num?)?.toInt(),
+      limit: (json['limit'] as num?)?.toInt(),
+      skip: (json['skip'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$ProductResponseModelToJson(
         ProductResponseModel instance) =>
     <String, dynamic>{
+      'total': instance.total,
+      'skip': instance.skip,
+      'limit': instance.limit,
       'products': instance.productsList,
     };
 
