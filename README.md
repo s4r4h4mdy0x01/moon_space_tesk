@@ -1,6 +1,17 @@
 # moon_space_task
 
 A new Flutter project.
+# Details
+It consists of screen "Home"  which are tasks that display products, details about them, and search for a product
+Flutter Project 
+## which has been used
+- flutter framework to build ui 
+- state management (Cubit)
+- Dio and Retrofit for RESTful API calls
+- Clean Architecture for a solid structur
+-injectable for dependency injection.
+- FlutterScreenUtil for responsive design
+- Cached Network Images for handling online images
 
 ## Getting Started
 
