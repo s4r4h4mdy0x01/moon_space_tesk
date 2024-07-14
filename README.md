@@ -24,6 +24,9 @@ A few resources to get you started if this is your first Flutter project:
 ## UI 
 ### Search Text Field And Button Cart
 ![search_widget](https://github.com/user-attachments/assets/db4ca616-3830-458b-ac82-e78e02e9ea96)
+### home screen consists of card of products !The design is similar to the picture because there is no access to it from Figma 
+![home](https://github.com/user-attachments/assets/35678535-2d6f-481e-b2ee-5c7fb3205458)
+
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
