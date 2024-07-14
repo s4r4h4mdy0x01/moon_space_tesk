@@ -13,6 +13,7 @@ Flutter Project
 - FlutterScreenUtil for responsive design
 - Cached Network Images for handling online images
 -  Using pull_to_refresh to the flutter scroll component drop-down refresh and pull up load.
+#### Please run  the project on  mobile phone  I was hoping for more development, but I have no idea about the ui and EndPoints from Api And the time is short
 
 ## Getting Started
 
@@ -33,6 +34,10 @@ A few resources to get you started if this is your first Flutter project:
 ![scrol2](https://github.com/user-attachments/assets/d1bead49-376d-4a7f-8808-e55a512e8eae)
 ### Search for a product
 ![search_text2](https://github.com/user-attachments/assets/04b11999-131e-46e9-8995-19ec3e358d1d)![search_test](https://github.com/user-attachments/assets/fe3fba0c-14a9-467f-9932-c89583e4c145)
+
+
+https://github.com/user-attachments/assets/8262e76e-8704-4809-908a-a345836004d5
+
 
 
 
