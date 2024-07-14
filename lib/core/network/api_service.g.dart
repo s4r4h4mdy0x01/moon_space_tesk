@@ -40,7 +40,7 @@ class _ApiService implements ApiService {
     )
             .compose(
               _dio.options,
-              'products#',
+              'products',
               queryParameters: queryParameters,
               data: _data,
             )

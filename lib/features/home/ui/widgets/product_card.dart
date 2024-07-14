@@ -6,6 +6,7 @@ import 'package:moon_space_task/features/home/ui/widgets/stack_image_and_favorit
 import '../../../../core/helper/spacing.dart';
 import '../../../../core/theming/styles.dart';
 
+//  This widget designs a card in which I display the product details
 class ProductsCard extends StatelessWidget {
   final String imageUrl;
   final String name;
@@ -28,8 +29,8 @@ class ProductsCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14.0),
         side: const BorderSide(
-          color: Colors.blue, // Edge color
-          width: 0.9, // Edge Width
+          color: Colors.blue,  // Edge color
+          width: 0.9,   // Edge Width
         ),
       ),
       child: Column(

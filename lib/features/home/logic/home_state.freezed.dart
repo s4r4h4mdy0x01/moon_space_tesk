@@ -20,7 +20,8 @@ mixin _$HomeState {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() productsLoading,
-    required TResult Function(List<Products?>? productsList) productsSuccess,
+    required TResult Function(List<Products?>? productsList, bool hasMore)
+        productsSuccess,
     required TResult Function(String error) productsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -28,7 +29,8 @@ mixin _$HomeState {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? productsLoading,
-    TResult? Function(List<Products?>? productsList)? productsSuccess,
+    TResult? Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult? Function(String error)? productsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -36,7 +38,8 @@ mixin _$HomeState {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? productsLoading,
-    TResult Function(List<Products?>? productsList)? productsSuccess,
+    TResult Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) =>
@@ -125,7 +128,8 @@ class _$InitialImpl implements _Initial {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() productsLoading,
-    required TResult Function(List<Products?>? productsList) productsSuccess,
+    required TResult Function(List<Products?>? productsList, bool hasMore)
+        productsSuccess,
     required TResult Function(String error) productsError,
   }) {
     return initial();
@@ -136,7 +140,8 @@ class _$InitialImpl implements _Initial {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? productsLoading,
-    TResult? Function(List<Products?>? productsList)? productsSuccess,
+    TResult? Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult? Function(String error)? productsError,
   }) {
     return initial?.call();
@@ -147,7 +152,8 @@ class _$InitialImpl implements _Initial {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? productsLoading,
-    TResult Function(List<Products?>? productsList)? productsSuccess,
+    TResult Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {
@@ -239,7 +245,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() productsLoading,
-    required TResult Function(List<Products?>? productsList) productsSuccess,
+    required TResult Function(List<Products?>? productsList, bool hasMore)
+        productsSuccess,
     required TResult Function(String error) productsError,
   }) {
     return productsLoading();
@@ -250,7 +257,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? productsLoading,
-    TResult? Function(List<Products?>? productsList)? productsSuccess,
+    TResult? Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult? Function(String error)? productsError,
   }) {
     return productsLoading?.call();
@@ -261,7 +269,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? productsLoading,
-    TResult Function(List<Products?>? productsList)? productsSuccess,
+    TResult Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {
@@ -319,7 +328,7 @@ abstract class _$$ProductsSuccessImplCopyWith<$Res> {
           $Res Function(_$ProductsSuccessImpl) then) =
       __$$ProductsSuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({List<Products?>? productsList});
+  $Res call({List<Products?>? productsList, bool hasMore});
 }
 
 /// @nodoc
@@ -334,12 +343,17 @@ class __$$ProductsSuccessImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? productsList = freezed,
+    Object? hasMore = null,
   }) {
     return _then(_$ProductsSuccessImpl(
       freezed == productsList
           ? _value._productsList
           : productsList // ignore: cast_nullable_to_non_nullable
               as List<Products?>?,
+      null == hasMore
+          ? _value.hasMore
+          : hasMore // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -347,7 +361,7 @@ class __$$ProductsSuccessImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$ProductsSuccessImpl implements ProductsSuccess {
-  const _$ProductsSuccessImpl(final List<Products?>? productsList)
+  const _$ProductsSuccessImpl(final List<Products?>? productsList, this.hasMore)
       : _productsList = productsList;
 
   final List<Products?>? _productsList;
@@ -361,8 +375,11 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
   }
 
   @override
+  final bool hasMore;
+
+  @override
   String toString() {
-    return 'HomeState.productsSuccess(productsList: $productsList)';
+    return 'HomeState.productsSuccess(productsList: $productsList, hasMore: $hasMore)';
   }
 
   @override
@@ -371,12 +388,13 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
         (other.runtimeType == runtimeType &&
             other is _$ProductsSuccessImpl &&
             const DeepCollectionEquality()
-                .equals(other._productsList, _productsList));
+                .equals(other._productsList, _productsList) &&
+            (identical(other.hasMore, hasMore) || other.hasMore == hasMore));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_productsList));
+      runtimeType, const DeepCollectionEquality().hash(_productsList), hasMore);
 
   @JsonKey(ignore: true)
   @override
@@ -390,10 +408,11 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() productsLoading,
-    required TResult Function(List<Products?>? productsList) productsSuccess,
+    required TResult Function(List<Products?>? productsList, bool hasMore)
+        productsSuccess,
     required TResult Function(String error) productsError,
   }) {
-    return productsSuccess(productsList);
+    return productsSuccess(productsList, hasMore);
   }
 
   @override
@@ -401,10 +420,11 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? productsLoading,
-    TResult? Function(List<Products?>? productsList)? productsSuccess,
+    TResult? Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult? Function(String error)? productsError,
   }) {
-    return productsSuccess?.call(productsList);
+    return productsSuccess?.call(productsList, hasMore);
   }
 
   @override
@@ -412,12 +432,13 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? productsLoading,
-    TResult Function(List<Products?>? productsList)? productsSuccess,
+    TResult Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
-      return productsSuccess(productsList);
+      return productsSuccess(productsList, hasMore);
     }
     return orElse();
   }
@@ -461,10 +482,12 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
 }
 
 abstract class ProductsSuccess implements HomeState {
-  const factory ProductsSuccess(final List<Products?>? productsList) =
+  const factory ProductsSuccess(
+          final List<Products?>? productsList, final bool hasMore) =
       _$ProductsSuccessImpl;
 
   List<Products?>? get productsList;
+  bool get hasMore;
   @JsonKey(ignore: true)
   _$$ProductsSuccessImplCopyWith<_$ProductsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
@@ -536,7 +559,8 @@ class _$ProductsErrorImpl implements ProductsError {
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
     required TResult Function() productsLoading,
-    required TResult Function(List<Products?>? productsList) productsSuccess,
+    required TResult Function(List<Products?>? productsList, bool hasMore)
+        productsSuccess,
     required TResult Function(String error) productsError,
   }) {
     return productsError(error);
@@ -547,7 +571,8 @@ class _$ProductsErrorImpl implements ProductsError {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
     TResult? Function()? productsLoading,
-    TResult? Function(List<Products?>? productsList)? productsSuccess,
+    TResult? Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult? Function(String error)? productsError,
   }) {
     return productsError?.call(error);
@@ -558,7 +583,8 @@ class _$ProductsErrorImpl implements ProductsError {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
     TResult Function()? productsLoading,
-    TResult Function(List<Products?>? productsList)? productsSuccess,
+    TResult Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {

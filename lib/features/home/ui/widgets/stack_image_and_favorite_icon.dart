@@ -7,7 +7,7 @@ import 'package:moon_space_task/core/theming/colors.dart';
 class StackImageAndFavoriteIcon extends StatelessWidget {
   final String image;
   const StackImageAndFavoriteIcon({super.key, required this.image});
-
+ //This widget contains the Stack contains A  Image with FavoriteIcon a  above it is displayed in the ProductsCard Widget
   @override
   Widget build(BuildContext context) {
     return Stack(

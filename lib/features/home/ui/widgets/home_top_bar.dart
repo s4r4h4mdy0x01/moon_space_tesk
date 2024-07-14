@@ -5,6 +5,8 @@ import '../../../../core/const/string.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../core/widgets/app_text_field.dart';
 
+// This widget contains the search and the cart Icon as AppBar Home Screen
+
 class HomeTopBar extends StatelessWidget {
   const HomeTopBar({super.key});
 

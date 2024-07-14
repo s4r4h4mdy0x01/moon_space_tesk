@@ -13,8 +13,8 @@ class HomeScreen extends StatelessWidget {
 
         child: Container(
            margin: const EdgeInsets.fromLTRB(6, 20, 6, 28),
-          child: Column(children: [
-              Center(child: const     HomeTopBar()),
+          child: const Column(children: [
+              Center(child: HomeTopBar()),
               Expanded(child: GridViewBuilderProducts()),
           ],),
         ),
