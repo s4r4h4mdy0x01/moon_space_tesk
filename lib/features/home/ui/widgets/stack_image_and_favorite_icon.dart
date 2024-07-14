@@ -1,9 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:moon_space_task/core/theming/colors.dart';
 
-// This widget is responsible for building the image with the heart icon on top of it
 class StackImageAndFavoriteIcon extends StatelessWidget {
   final String image;
   const StackImageAndFavoriteIcon({super.key, required this.image});
@@ -22,7 +21,7 @@ class StackImageAndFavoriteIcon extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.shade400,
-                  offset: Offset(1, 2),
+                  offset: const  Offset(1, 2),
                   blurRadius: 1,
                 )
               ]),

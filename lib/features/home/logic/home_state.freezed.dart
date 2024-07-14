@@ -22,6 +22,8 @@ mixin _$HomeState {
     required TResult Function() productsLoading,
     required TResult Function(List<Products?>? productsList, bool hasMore)
         productsSuccess,
+    required TResult Function(List<Products?>? productsList)
+        searchProductsSuccess,
     required TResult Function(String error) productsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -31,6 +33,7 @@ mixin _$HomeState {
     TResult? Function()? productsLoading,
     TResult? Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult? Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult? Function(String error)? productsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -40,6 +43,7 @@ mixin _$HomeState {
     TResult Function()? productsLoading,
     TResult Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) =>
@@ -49,6 +53,8 @@ mixin _$HomeState {
     required TResult Function(_Initial value) initial,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(SearchProductsSuccess value)
+        searchProductsSuccess,
     required TResult Function(ProductsError value) productsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -57,6 +63,7 @@ mixin _$HomeState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult? Function(ProductsError value)? productsError,
   }) =>
       throw _privateConstructorUsedError;
@@ -65,6 +72,7 @@ mixin _$HomeState {
     TResult Function(_Initial value)? initial,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult Function(ProductsError value)? productsError,
     required TResult orElse(),
   }) =>
@@ -130,6 +138,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function() productsLoading,
     required TResult Function(List<Products?>? productsList, bool hasMore)
         productsSuccess,
+    required TResult Function(List<Products?>? productsList)
+        searchProductsSuccess,
     required TResult Function(String error) productsError,
   }) {
     return initial();
@@ -142,6 +152,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? productsLoading,
     TResult? Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult? Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult? Function(String error)? productsError,
   }) {
     return initial?.call();
@@ -154,6 +165,7 @@ class _$InitialImpl implements _Initial {
     TResult Function()? productsLoading,
     TResult Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {
@@ -169,6 +181,8 @@ class _$InitialImpl implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(SearchProductsSuccess value)
+        searchProductsSuccess,
     required TResult Function(ProductsError value) productsError,
   }) {
     return initial(this);
@@ -180,6 +194,7 @@ class _$InitialImpl implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult? Function(ProductsError value)? productsError,
   }) {
     return initial?.call(this);
@@ -191,6 +206,7 @@ class _$InitialImpl implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult Function(ProductsError value)? productsError,
     required TResult orElse(),
   }) {
@@ -247,6 +263,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function() productsLoading,
     required TResult Function(List<Products?>? productsList, bool hasMore)
         productsSuccess,
+    required TResult Function(List<Products?>? productsList)
+        searchProductsSuccess,
     required TResult Function(String error) productsError,
   }) {
     return productsLoading();
@@ -259,6 +277,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function()? productsLoading,
     TResult? Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult? Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult? Function(String error)? productsError,
   }) {
     return productsLoading?.call();
@@ -271,6 +290,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function()? productsLoading,
     TResult Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {
@@ -286,6 +306,8 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     required TResult Function(_Initial value) initial,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(SearchProductsSuccess value)
+        searchProductsSuccess,
     required TResult Function(ProductsError value) productsError,
   }) {
     return productsLoading(this);
@@ -297,6 +319,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult? Function(ProductsError value)? productsError,
   }) {
     return productsLoading?.call(this);
@@ -308,6 +331,7 @@ class _$ProductsLoadingImpl implements ProductsLoading {
     TResult Function(_Initial value)? initial,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult Function(ProductsError value)? productsError,
     required TResult orElse(),
   }) {
@@ -410,6 +434,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function() productsLoading,
     required TResult Function(List<Products?>? productsList, bool hasMore)
         productsSuccess,
+    required TResult Function(List<Products?>? productsList)
+        searchProductsSuccess,
     required TResult Function(String error) productsError,
   }) {
     return productsSuccess(productsList, hasMore);
@@ -422,6 +448,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function()? productsLoading,
     TResult? Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult? Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult? Function(String error)? productsError,
   }) {
     return productsSuccess?.call(productsList, hasMore);
@@ -434,6 +461,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function()? productsLoading,
     TResult Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {
@@ -449,6 +477,8 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     required TResult Function(_Initial value) initial,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(SearchProductsSuccess value)
+        searchProductsSuccess,
     required TResult Function(ProductsError value) productsError,
   }) {
     return productsSuccess(this);
@@ -460,6 +490,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult? Function(_Initial value)? initial,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult? Function(ProductsError value)? productsError,
   }) {
     return productsSuccess?.call(this);
@@ -471,6 +502,7 @@ class _$ProductsSuccessImpl implements ProductsSuccess {
     TResult Function(_Initial value)? initial,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult Function(ProductsError value)? productsError,
     required TResult orElse(),
   }) {
@@ -491,6 +523,175 @@ abstract class ProductsSuccess implements HomeState {
   @JsonKey(ignore: true)
   _$$ProductsSuccessImplCopyWith<_$ProductsSuccessImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchProductsSuccessImplCopyWith<$Res> {
+  factory _$$SearchProductsSuccessImplCopyWith(
+          _$SearchProductsSuccessImpl value,
+          $Res Function(_$SearchProductsSuccessImpl) then) =
+      __$$SearchProductsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<Products?>? productsList});
+}
+
+/// @nodoc
+class __$$SearchProductsSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$SearchProductsSuccessImpl>
+    implements _$$SearchProductsSuccessImplCopyWith<$Res> {
+  __$$SearchProductsSuccessImplCopyWithImpl(_$SearchProductsSuccessImpl _value,
+      $Res Function(_$SearchProductsSuccessImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? productsList = freezed,
+  }) {
+    return _then(_$SearchProductsSuccessImpl(
+      freezed == productsList
+          ? _value._productsList
+          : productsList // ignore: cast_nullable_to_non_nullable
+              as List<Products?>?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchProductsSuccessImpl implements SearchProductsSuccess {
+  const _$SearchProductsSuccessImpl(final List<Products?>? productsList)
+      : _productsList = productsList;
+
+  final List<Products?>? _productsList;
+  @override
+  List<Products?>? get productsList {
+    final value = _productsList;
+    if (value == null) return null;
+    if (_productsList is EqualUnmodifiableListView) return _productsList;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'HomeState.searchProductsSuccess(productsList: $productsList)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchProductsSuccessImpl &&
+            const DeepCollectionEquality()
+                .equals(other._productsList, _productsList));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_productsList));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchProductsSuccessImplCopyWith<_$SearchProductsSuccessImpl>
+      get copyWith => __$$SearchProductsSuccessImplCopyWithImpl<
+          _$SearchProductsSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() productsLoading,
+    required TResult Function(List<Products?>? productsList, bool hasMore)
+        productsSuccess,
+    required TResult Function(List<Products?>? productsList)
+        searchProductsSuccess,
+    required TResult Function(String error) productsError,
+  }) {
+    return searchProductsSuccess(productsList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? productsLoading,
+    TResult? Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
+    TResult? Function(List<Products?>? productsList)? searchProductsSuccess,
+    TResult? Function(String error)? productsError,
+  }) {
+    return searchProductsSuccess?.call(productsList);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? productsLoading,
+    TResult Function(List<Products?>? productsList, bool hasMore)?
+        productsSuccess,
+    TResult Function(List<Products?>? productsList)? searchProductsSuccess,
+    TResult Function(String error)? productsError,
+    required TResult orElse(),
+  }) {
+    if (searchProductsSuccess != null) {
+      return searchProductsSuccess(productsList);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(ProductsLoading value) productsLoading,
+    required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(SearchProductsSuccess value)
+        searchProductsSuccess,
+    required TResult Function(ProductsError value) productsError,
+  }) {
+    return searchProductsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(ProductsLoading value)? productsLoading,
+    TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(SearchProductsSuccess value)? searchProductsSuccess,
+    TResult? Function(ProductsError value)? productsError,
+  }) {
+    return searchProductsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(ProductsLoading value)? productsLoading,
+    TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(SearchProductsSuccess value)? searchProductsSuccess,
+    TResult Function(ProductsError value)? productsError,
+    required TResult orElse(),
+  }) {
+    if (searchProductsSuccess != null) {
+      return searchProductsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchProductsSuccess implements HomeState {
+  const factory SearchProductsSuccess(final List<Products?>? productsList) =
+      _$SearchProductsSuccessImpl;
+
+  List<Products?>? get productsList;
+  @JsonKey(ignore: true)
+  _$$SearchProductsSuccessImplCopyWith<_$SearchProductsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -561,6 +762,8 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function() productsLoading,
     required TResult Function(List<Products?>? productsList, bool hasMore)
         productsSuccess,
+    required TResult Function(List<Products?>? productsList)
+        searchProductsSuccess,
     required TResult Function(String error) productsError,
   }) {
     return productsError(error);
@@ -573,6 +776,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function()? productsLoading,
     TResult? Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult? Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult? Function(String error)? productsError,
   }) {
     return productsError?.call(error);
@@ -585,6 +789,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function()? productsLoading,
     TResult Function(List<Products?>? productsList, bool hasMore)?
         productsSuccess,
+    TResult Function(List<Products?>? productsList)? searchProductsSuccess,
     TResult Function(String error)? productsError,
     required TResult orElse(),
   }) {
@@ -600,6 +805,8 @@ class _$ProductsErrorImpl implements ProductsError {
     required TResult Function(_Initial value) initial,
     required TResult Function(ProductsLoading value) productsLoading,
     required TResult Function(ProductsSuccess value) productsSuccess,
+    required TResult Function(SearchProductsSuccess value)
+        searchProductsSuccess,
     required TResult Function(ProductsError value) productsError,
   }) {
     return productsError(this);
@@ -611,6 +818,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult? Function(_Initial value)? initial,
     TResult? Function(ProductsLoading value)? productsLoading,
     TResult? Function(ProductsSuccess value)? productsSuccess,
+    TResult? Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult? Function(ProductsError value)? productsError,
   }) {
     return productsError?.call(this);
@@ -622,6 +830,7 @@ class _$ProductsErrorImpl implements ProductsError {
     TResult Function(_Initial value)? initial,
     TResult Function(ProductsLoading value)? productsLoading,
     TResult Function(ProductsSuccess value)? productsSuccess,
+    TResult Function(SearchProductsSuccess value)? searchProductsSuccess,
     TResult Function(ProductsError value)? productsError,
     required TResult orElse(),
   }) {

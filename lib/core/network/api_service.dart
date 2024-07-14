@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:moon_space_task/core/network/api_constants.dart';
 import 'package:retrofit/retrofit.dart';
 
-import '../../features/home/data/product_response_model.dart';
+import '../../features/home/data/models/product_response_model.dart';
 part 'api_service.g.dart';
 @RestApi(baseUrl: ApiContants.baseUsrl)
 abstract class ApiService {
@@ -13,5 +13,6 @@ abstract class ApiService {
   Future<ProductResponseModel> getProducts( 
     @Query("skip") int skip,
     @Query("limit") int limit,);
+   
   
 }

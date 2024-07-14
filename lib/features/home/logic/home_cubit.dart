@@ -1,6 +1,6 @@
-import 'package:bloc/bloc.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moon_space_task/features/home/data/product_response_model.dart';
+
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:moon_space_task/features/home/data/models/product_response_model.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import '../data/repo/home_repo.dart';
@@ -11,11 +11,13 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this._homeRepo) : super(const HomeState.initial());
   List<Products?>? productsList = [];
 
+  ProductResponseModel productResponseModel =ProductResponseModel();
+
   int _skip = 0;
   final int _limit = 10;
   final RefreshController refreshController =
       RefreshController(initialRefresh: false);
-  void fetchProducts() async {
+  Future<void> fetchProducts() async {
     emit(const HomeState.productsLoading());
     final response = await _homeRepo.getProducts(_skip, _limit);
     response.when(success: (productResponseModel) {
@@ -27,7 +29,7 @@ class HomeCubit extends Cubit<HomeState> {
       emit(HomeState.productsError(error.toString()));
     });
   }
-
+ // fetchMoreProducts
   void fetchMoreProducts() async {
     if (state is ProductsSuccess) {
       final currentState = state as ProductsSuccess;
@@ -44,4 +46,5 @@ class HomeCubit extends Cubit<HomeState> {
       });
     }
   }
+
 }

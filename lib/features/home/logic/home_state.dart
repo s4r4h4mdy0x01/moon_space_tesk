@@ -1,7 +1,7 @@
 
 
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:moon_space_task/features/home/data/product_response_model.dart';
+import 'package:moon_space_task/features/home/data/models/product_response_model.dart';
 part 'home_state.freezed.dart';
 @freezed
 class HomeState with _$HomeState {
